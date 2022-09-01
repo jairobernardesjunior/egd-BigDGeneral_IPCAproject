@@ -1,2 +1,5 @@
 # dgIPCAproject
-O projeto dgIPCA tem como objetivo baixar mensalmente a tabela de IPCA do site do IBGE do endereço https://ftp.ibge.gov.br/Precos_Indices_de_Precos_ao_Consumidor/Numeros_Indices/Numind_INPC_IPCA/ipca_NumindGRUPOS.zip, extrair os dados das tabelas anuais de ipca, transformar em tabelas separadas e gravar cada uma em um arquivos parquet, fazer a ingestão em um bucket s3 na AWS para posterior catalogação desses arquivos parquet através do AWS Glue Data Catalog, sendo os dados posteriormente liberados para os Data Analysts e Data Scientysts que usarão ferramentas de insights para geração de apresentações gráficas para a empresa.
+    Abre o site https://www.idinheiro.com.br/tabelas/tabela-ipca/ de tabelas de ipca, procura a tabela
+    completa de ipca de todos os anos disponíveis, converte os valores em colunas de ano, mes e perc,
+    grava em arquivo parquet e faz a ingestão no bucket s3 arq-ipca-processeds3, deixando os dados 
+    disponíveis serem catalogados posteriormente pelo Glue e disponibilizados para serem acessados pelo quicksight através do athena, tudo na aws cloud.
