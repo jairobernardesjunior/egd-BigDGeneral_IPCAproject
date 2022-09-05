@@ -30,6 +30,7 @@ def lambda_handler(event, context):
         df = pd.read_html(table_str)[0]
 
         print(df)
+        print(type(req))
 
     else:
         print('site não encontrado == ' + url)
