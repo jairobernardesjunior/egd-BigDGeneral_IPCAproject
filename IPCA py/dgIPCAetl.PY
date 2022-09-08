@@ -40,6 +40,9 @@ def lambda_handler(event, context):
     upds3.UploadFile_file_ipca_processedS3(nomeBucketS3, 
                                             nomeArquivo + '.pq', 
                                             pathArquivo + nomeArquivo +  '.pq')
+    upds3.UploadFile_file_ipca_processedS3('arq-ipca-processeds3-dtdv', 
+                                            nomeArquivo + '.csv', 
+                                            pathArquivo + nomeArquivo +  '.csv')                                            
 
 nomeBucketS3 = 'arq-ipca-processeds3'
 nomeArquivo = 'ipca'

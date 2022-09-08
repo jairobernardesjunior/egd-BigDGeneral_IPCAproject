@@ -56,6 +56,8 @@ def Monta_arq_ipca(tabela, PathArquivo):
 
         df.to_parquet(PathArquivo + '.pq')
         df.to_string(PathArquivo + '.txt')
+        df.to_json(PathArquivo + '.json')
+        df.to_csv(PathArquivo + '.csv')
         return True 
         
     else:
